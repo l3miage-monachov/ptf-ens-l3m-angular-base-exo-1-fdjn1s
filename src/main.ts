@@ -28,6 +28,15 @@ export class AppComponent {
    * Tire au sort un indice entre 0 et le nombre de lieux à voir.
    * Affecte cet indice au signal index.
    */
+  
+  // const lieuActuel = computed<Lieu>(
+  //   () => this.lieux. 
+  // );
+  
+  updateIndex() {
+    this.index.set( Math.floor(Math.random() * this.lieux.length) );
+  }
+
   voyagevoyage(): void {
   }
 
