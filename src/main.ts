@@ -30,15 +30,15 @@ export class AppComponent {
    */
   
   readonly lieuActuel = computed<Lieu>(
-     () => ({ temperature = this.lieux()[this.index()].temperature,
-      photoURL = this.lieux()[this.index()].photoURL,})
+     () => ({ temperature : this.lieux()[this.index()].temperature,
+      photoURL : this.lieux()[this.index()].photoURL,})
   );
   
   
   voyagevoyage(): void {
-    updateIndex() {
+    
       this.index.set( Math.floor(Math.random() * this.lieux.length) );
-    }
+    
   }
 
 }
