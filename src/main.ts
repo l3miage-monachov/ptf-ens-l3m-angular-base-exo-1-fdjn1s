@@ -29,15 +29,16 @@ export class AppComponent {
    * Affecte cet indice au signal index.
    */
   
-  // const lieuActuel = computed<Lieu>(
-  //   () => this.lieux. 
-  // );
+  readonly lieuActuel = computed<Lieu>(
+     () => ({ temperature = this.lieux()[this.index()].temperature,
+      photoURL = this.lieux()[this.index()].photoURL,})
+  );
   
-  updateIndex() {
-    this.index.set( Math.floor(Math.random() * this.lieux.length) );
-  }
-
+  
   voyagevoyage(): void {
+    updateIndex() {
+      this.index.set( Math.floor(Math.random() * this.lieux.length) );
+    }
   }
 
 }
